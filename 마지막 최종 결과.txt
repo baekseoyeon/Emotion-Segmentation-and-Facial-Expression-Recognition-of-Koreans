@@ -1,0 +1,65 @@
+Epoch 1/20
+Train Loss: 0.9582, Train Accuracy: 0.6364
+Val Loss: 0.7130, Val Accuracy: 0.7284
+Epoch 2/20
+Train Loss: 0.7124, Train Accuracy: 0.7301
+Val Loss: 0.6185, Val Accuracy: 0.7682
+Epoch 3/20
+Train Loss: 0.6092, Train Accuracy: 0.7683
+Val Loss: 0.5574, Val Accuracy: 0.7957
+Epoch 4/20
+Train Loss: 0.5176, Train Accuracy: 0.8058
+Val Loss: 0.4696, Val Accuracy: 0.8307
+Epoch 5/20
+Train Loss: 0.4321, Train Accuracy: 0.8382
+Val Loss: 0.4513, Val Accuracy: 0.8433
+Epoch 6/20
+Train Loss: 0.2656, Train Accuracy: 0.9082
+Val Loss: 0.3289, Val Accuracy: 0.8943
+Epoch 7/20
+Train Loss: 0.2057, Train Accuracy: 0.9301
+Val Loss: 0.3111, Val Accuracy: 0.9044
+Epoch 8/20
+Train Loss: 0.1742, Train Accuracy: 0.9421
+Val Loss: 0.3022, Val Accuracy: 0.9081
+Epoch 9/20
+Train Loss: 0.1522, Train Accuracy: 0.9522
+Val Loss: 0.3006, Val Accuracy: 0.9127
+Epoch 10/20
+Train Loss: 0.1319, Train Accuracy: 0.9579
+Val Loss: 0.2966, Val Accuracy: 0.9168
+Epoch 11/20
+Train Loss: 0.1070, Train Accuracy: 0.9697
+Val Loss: 0.2939, Val Accuracy: 0.9182
+Epoch 12/20
+Train Loss: 0.1052, Train Accuracy: 0.9682
+Val Loss: 0.2923, Val Accuracy: 0.9182
+Epoch 13/20
+Train Loss: 0.1021, Train Accuracy: 0.9713
+Val Loss: 0.2938, Val Accuracy: 0.9186
+Epoch 14/20
+Train Loss: 0.1011, Train Accuracy: 0.9722
+Val Loss: 0.2936, Val Accuracy: 0.9182
+Epoch 15/20
+Train Loss: 0.0975, Train Accuracy: 0.9730
+Val Loss: 0.2898, Val Accuracy: 0.9193
+Epoch 16/20
+Train Loss: 0.0956, Train Accuracy: 0.9737
+Val Loss: 0.2936, Val Accuracy: 0.9181
+Epoch 17/20
+Train Loss: 0.0967, Train Accuracy: 0.9726
+Val Loss: 0.2897, Val Accuracy: 0.9194
+Epoch 18/20
+Train Loss: 0.0952, Train Accuracy: 0.9734
+Val Loss: 0.2935, Val Accuracy: 0.9182
+Epoch 19/20
+Train Loss: 0.0951, Train Accuracy: 0.9728
+Val Loss: 0.2939, Val Accuracy: 0.9198
+Epoch 20/20
+Train Loss: 0.0942, Train Accuracy: 0.9728
+Val Loss: 0.2932, Val Accuracy: 0.9202
+
+
+<ipython-input-4-7f9589e74271>:42: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load('emotion_resnet18.pth'))  # 저장된 모델 가중치 불러오기
+Test Loss: 0.2905, Test Accuracy: 0.9189
