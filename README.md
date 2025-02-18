@@ -63,7 +63,7 @@ Run the script:
 ```bash
 python classfication.py
 ```
-* Currently, the dataset in `Emotion-Segmentation-and-Facial-Expression-Recognition-of-Koreans/data` has already been split.
+* Currently, the dataset in `Emotion-Segmentation-and-Facial-Expression-Recognition-of-Koreans/data/` has already been split.
 
 (3) Training with Cross-Validation
 The `cross-validation.py` script trains a ResNet-18 model using 5-fold cross-validation.
