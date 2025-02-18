@@ -77,7 +77,7 @@ python cross-validation.py
 ## Output
 Cropped face images are saved in a subdirectory under the input folder.
 
-Trained model weights for each fold are saved as emotion_resnet18_fold{fold_number}.pth.
+Trained model weights for each fold are saved as emotion_resnet18.pth.
 
 ## Notice
 The YOLOv8-face model file (yolov8n-face.pt) must be downloaded and placed in the working directory before running `preprocess.py`.
