@@ -1,10 +1,6 @@
 # Emotion-Segmentation-and-Facial-Expression-Recognition-of-Koreans 😀🥲🤨😏
 ## Introduction
 
-<p align="center">
-  <img src="image.png" width="400">
-</p>
-
 Emotion recognition technology is highly versatile and plays a critical role in enhancing human-machine interactions. 
 
 In particular, the Korean  society, influenced by Confucian values, often suppresses emotional expressions or contains complex emotions. 
@@ -22,9 +18,11 @@ With the optimal hyperparameters, the final model achieved a test accuracy of 91
 In comparison with the previous research on Korean facial expression detection, which achieved 84.37% accuracy with 49,000 images, this study reached 91.89% with just 35,000 images—showing a 7.52% improvement in accuracy.
 
 ## Repository Structure
-preprocess.py: Preprocesses raw images using the YOLOv8-face model to detect and crop faces.
-classfication.py: Splits the dataset into training, validation, and test sets based on specified ratios.
-cross-validation.py: Implements a 5-fold cross-validation pipeline using ResNet-18 for emotion classification.
+`preprocess.py`: Preprocesses raw images using the YOLOv8-face model to detect and crop faces.
+
+`classfication.py`: Splits the dataset into training, validation, and test sets based on specified ratios.
+
+`cross-validation.py`: Implements a 5-fold cross-validation pipeline using ResNet-18 for emotion classification.
 
 ## Setup
 
@@ -39,26 +37,51 @@ pip install torch torchvision scikit-learn ultralytics opencv-python Pillow
 
 ### 2. Run the Code
 (1) Preprocessing Images
-The preprocess.py script uses the YOLOv8-face model to detect faces in the dataset and crop them for further processing.
-Set the input folder path in preprocess.py:
+
+The `preprocess.py` script uses the YOLOv8-face model to detect faces in the dataset and crop them for further processing.
+
+Set the input folder path in `preprocess.py`:
 ```bash
-input_folder = 'Training'
+input_folder = 'Emotion-Segmentation-and-Facial-Expression-Recognition-of-Koreans/data/train'
 ```
 
-(2) Data Processing
-You can preprocess the data using chunking.py or sentences.py:
+Run the script:
 ```bash
-python chunking.py
-python sentences.py
+python preprocess.py
 ```
 
-(3) Run the Web Application
-To launch the Streamlit-based web application, execute:
+(2) Splitting Dataset
+
+The `classfication.py` script splits the dataset into training, validation, and test sets.
+
+Update the dataset directory path in `classfication.py`:
 ```bash
-streamlit run alphastorm_app.py
+data_dir = 'Emotion-Segmentation-and-Facial-Expression-Recognition-of-Koreans/data'
 ```
 
-## Data Notice
-This project uses private data provided by contest organizers. The dataset is not included in this repository. 
+Run the script:
+```bash
+python classfication.py
+```
+* Currently, the dataset in `Emotion-Segmentation-and-Facial-Expression-Recognition-of-Koreans/data` has already been split.
 
-Users must prepare and place the data manually.
+(3) Training with Cross-Validation
+The `cross-validation.py` script trains a ResNet-18 model using 5-fold cross-validation.
+
+Ensure your dataset is preprocessed and split correctly.
+
+Run the script:
+```bash
+python cross-validation.py
+```
+## Output
+Cropped face images are saved in a subdirectory under the input folder.
+
+Trained model weights for each fold are saved as emotion_resnet18_fold{fold_number}.pth.
+
+## Notice
+The YOLOv8-face model file (yolov8n-face.pt) must be downloaded and placed in the working directory before running `preprocess.py`.
+
+Modify batch size, learning rate, or other hyperparameters in `cross-validation.py` as needed.
+
+You can obtain the raw dataset from AI Hub. For more details, please refer to the paper.
