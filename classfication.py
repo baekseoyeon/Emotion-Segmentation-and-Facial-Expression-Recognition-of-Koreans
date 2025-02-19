@@ -3,7 +3,7 @@ import shutil
 import random
 
 # 데이터셋 경로
-data_dir = 'C:/Users/seoye/Desktop/emotion'
+data_dir = 'Emotion-Segmentation-and-Facial-Expression-Recognition-of-Koreans/data'
 
 # Train/Valid/Test 비율 설정
 train_ratio = 0.8
