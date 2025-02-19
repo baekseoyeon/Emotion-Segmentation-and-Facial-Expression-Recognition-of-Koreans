@@ -66,14 +66,19 @@ python classfication.py
 * Currently, the dataset in `Emotion-Segmentation-and-Facial-Expression-Recognition-of-Koreans/data/` has already been split.
 
 (3) Training with Cross-Validation
-The `cross-validation.py` script trains a ResNet-18 model using 5-fold cross-validation.
 
-Ensure your dataset is preprocessed and split correctly.
+The `cross-validation.py` is a script that trains an emotion classification model using ResNet-18 with 5-Fold Cross-Validation.
 
 Run the script:
 ```bash
 python cross-validation.py
 ```
+
+⚠ Note:
+The dataset must be properly defined as image_datasets['train'].
+
+Depending on the torchvision version, the usage of models.resnet18(weights=...) may vary.
+
 ## Output
 Cropped face images are saved in a subdirectory under the input folder.
 
