@@ -6,7 +6,7 @@ from PIL import Image
 # YOLOv8-face 모델 로드
 model = YOLO('yolov8n-face.pt')
 
-input_folder = 'Emotion-Segmentation-and-Facial-Expression-Recognition-of-Koreans/data/train'
+input_folder = 'Emotion-Segmentation-and-Facial-Expression-Recognition-of-Koreans/data/'
 
 padding_ratio = 0
 person_image_count = {}
