@@ -35,7 +35,7 @@
 ├── README.md
 ├── docs/
 │   ├── FILE_GUIDE.md
-│   └── 발표 논문.pdf
+│   └── 발표_논문.pdf
 └── experiment/
     ├── preprocess.py
     ├── classfication.py
@@ -87,7 +87,7 @@ ResNet-18 기반 감정 분류 모델을 5-fold cross-validation으로 학습하
 
 실험 결과를 텍스트 형태로 정리한 파일입니다.
 
-### `docs/발표 논문.pdf`
+### `docs/발표_논문.pdf`
 
 본 연구가 수록된 학술대회 논문 자료입니다.  
 
